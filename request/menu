@@ -4,7 +4,7 @@ clear
 #ACTULIZADOR
 rm -rf instalscript.sh &>/dev/null
 [[ ! -e /etc/versin_script ]] && echo 1 > /etc/versin_script
-v11=$(curl -sSL "https://lulseckteam.com/kali/master/herramientas/vercionpanel")
+v11=$(curl -sSL "https://raw.githubusercontent.com/EddyJhoel/py-min/master/vercionpanel")
 v22=$(cat /etc/versin_script)
 [[ $v11 = $v22 ]] && vesaoSCT="\033[1;32mVPS•MX (v$v22)\033[1;97m #OFICIAL ®️ \033[1;31m]" || vesaoSCT="\033[1;31mVPS•MX (v$v22) ► \033[1;32mVPS•MX (v$v11)\033[1;31m]" 
 _hora=$(printf '%(%D-%H:%M:%S)T') 
@@ -480,7 +480,7 @@ clear
 msg -bar
 msg -ama "          ¿ DESEA DESINSTALAR SCRIPT ?"
 msg -bar
-echo -e " Esto borrara todos los archivos del scrip"
+echo -e " Esto borrara todos los archivos del scrip Lsk MIN"
 msg -bar
 while [[ ${yesno} != @(s|S|y|Y|n|N) ]]; do
 read -p " [S/N]: " yesno
@@ -699,6 +699,7 @@ export -f meu_ip
 export -f fun_ip
 clear
 #########VISUALIZACION DE MENU
+
 msg -bar
 echo -e "\e[97m\033[1;41m              LULSECK SCRIPT MIN   \033[1;37m"
 msg -bar
