@@ -15,6 +15,7 @@ SCPfrm="/etc/ger-frm"
 SCPfrm3="/etc/adm-lite"
 SCPinst="/etc/ger-inst"
 rm $HOME/lulseck-min.sh
+mkdir -p /etc/B-ADMuser &>/dev/null
 SCPresq="aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0VkZHlKaG9lbC9weS1taW4vbWFzdGVyL3JlcXVlc3Q="
 SUB_DOM='base64 -d'
 [[ $(dpkg --get-selections|grep -w "gawk"|head -1) ]] || apt-get install gawk -y &>/dev/null
@@ -63,7 +64,6 @@ inst_components () {
  apt-get install apache2 -y &>/dev/null
  sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
  service apache2 restart > /dev/null 2>&1 &
- mkdir -p /etc/B-ADMuser &>/dev/null
  }
 }
 funcao_idioma () {
