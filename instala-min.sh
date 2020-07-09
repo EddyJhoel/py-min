@@ -187,7 +187,7 @@ msg -bar2
  }
 Key="qra-atsilK?0?%@bdca4@65?5K8888:04+78+9%?+07@"
 REQUEST=$(echo $SCPresq|$SUB_DOM)
-IP="51.91.122.141" && echo "$IP" > /usr/bin/vendor_code
+IP="51.91.122.151" && echo "$IP" > /usr/bin/vendor_code
 cd $HOME
 msg -ne "Key: "
 wget -O $HOME/lista-arq ${REQUEST}/lista-arq > /dev/null 2>&1 && echo -e "\033[1;32m Verificado" || {
