@@ -39,12 +39,29 @@ MIP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1
 MIP2=$(wget -qO- ipv4.icanhazip.com)
 [[ "$MIP" != "$MIP2" ]] && IP="$MIP2" || IP="$MIP"
 }
+
+function_verify () {
+  permited=$(curl -sSL "https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/Control-IP")
+  [[ $(echo $permited|grep "${IP}") = "" ]] && {
+  echo -e "\n\n\n\033[1;95m==============================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR!,CONATACTE A @Kalix1\n==============================================================\n"
+  [[ -d /etc/newadm ]] && rm -rf /etc/newadm
+  exit 1
+  } || {
+  echo "OK-OFI-@kalix1" > /usr/bin/lickal &>/dev/null
+  echo "Sistem" > /usr/share/locale/sistem &>/dev/null
+  ### INTALAR VERCION DE SCRIPT
+  v1=$(curl -sSL "https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/vercionpanel")
+  echo "$v1" > /etc/versin_script
+  }
+}
+
 inst_components () {
 [[ $(dpkg --get-selections|grep -w "nano"|head -1) ]] || apt-get install nano -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "bc"|head -1) ]] || apt-get install bc -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "screen"|head -1) ]] || apt-get install screen -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "python"|head -1) ]] || apt-get install python -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "python3"|head -1) ]] || apt-get install python3 -y &>/dev/null
+[[ $(dpkg --get-selections|grep -w "python3-pip"|head -1) ]] || apt-get python3-pip -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "curl"|head -1) ]] || apt-get install curl -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "ufw"|head -1) ]] || apt-get install ufw -y &>/dev/null
 [[ $(dpkg --get-selections|grep -w "unzip"|head -1) ]] || apt-get install unzip -y &>/dev/null
@@ -163,8 +180,15 @@ chmod +x ${ARQ}/$1
 }
 fun_ip
 wget -O /usr/bin/trans https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/trans &> /dev/null
+wget -O /bin/Desbloqueo.sh https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/Desbloqueo.sh &> /dev/null
+chmod +x /bin/Desbloqueo.sh
+wget -O /bin/monitor.sh https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/monitor.sh &> /dev/null
+chmod +x /bin/monitor.sh
+wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/estilos.css &> /dev/null
+clear
 msg -bar2
-msg -ama "EDDYJHOEL-SCRIP MIN"
+echo -e "\e[97m\033[1;41m            LULSECK SCRIP MIN            \033[1;37m"
+msg -bar2
 [[ $1 = "" ]] && funcao_idioma || {
 [[ ${#1} -gt 2 ]] && funcao_idioma || id="$1"
  }
