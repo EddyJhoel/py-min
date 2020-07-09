@@ -41,19 +41,12 @@ MIP2=$(wget -qO- ipv4.icanhazip.com)
 }
 
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/Control-IP")
-  [[ $(echo $permited|grep "${IP}") = "" ]] && {
-  echo -e "\n\n\n\033[1;95m==============================================================\n ¡ESTA KEY NO CONCUERDA CON EL INSTALADOR!,CONATACTE A @Kalix1\n==============================================================\n"
-  [[ -d /etc/newadm ]] && rm -rf /etc/newadm
-  exit 1
-  } || {
   echo "OK-OFI-@kalix1" > /usr/bin/lickal &>/dev/null
   echo "Sistem" > /usr/share/locale/sistem &>/dev/null
   ### INTALAR VERCION DE SCRIPT
   v1=$(curl -sSL "https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/vercionpanel")
   echo "$v1" > /etc/versin_script
   }
-}
 
 inst_components () {
 [[ $(dpkg --get-selections|grep -w "nano"|head -1) ]] || apt-get install nano -y &>/dev/null
