@@ -126,6 +126,37 @@ mkdir /etc/rom  > /dev/null 2>&1
 mkdir /etc/bin  > /dev/null 2>&1
 mkdir /etc/nanobc  > /dev/null 2>&1
 msg -bar2
+wget -O /bin/rebootnb https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/ArchivosUtilitarios/rebootnb &> /dev/null
+chmod +x /bin/rebootnb 
+wget -O /bin/resetsshdrop https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/ArchivosUtilitarios/resetsshdrop &> /dev/null
+chmod +x /bin/resetsshdrop
+wget -O /etc/versin_script_new https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/Vercion &>/dev/null
+msg -bar2
+echo '#!/bin/sh -e' > /etc/rc.local
+sudo chmod +x /etc/rc.local
+echo "sudo rebootnb" >> /etc/rc.local
+echo "sudo resetsshdrop" >> /etc/rc.local
+echo "sleep 2s" >> /etc/rc.local
+echo "exit 0" >> /etc/rc.local
+/bin/cp /etc/skel/.bashrc ~/
+echo 'clear' >> .bashrc
+echo 'echo ""' >> .bashrc
+echo 'echo -e "\033[91m      __     ______  ____        __  ____  __ " '>> .bashrc
+echo 'echo -e "\033[91m      \ \   / /  _ \/ ___|      |  \/  \ \/ / " '>> .bashrc
+echo 'echo -e "\033[91m       \ \ / /| |_) \___ \ _____| |\/| |\  /  " '>> .bashrc
+echo 'echo -e "\033[91m        \ V / |  __/ ___) |_____| |  | |/  \  " '>> .bashrc
+echo 'echo -e "\033[91m         \_/  |_|   |____/      |_|  |_/_/\_\ " '>> .bashrc
+echo 'echo "" '>> .bashrc
+echo 'mess1="$(less /etc/newadm/message.txt)" ' >> .bashrc
+echo 'echo "" '>> .bashrc
+echo 'echo -e "\033[92m        RESELLER : $mess1 "'>> .bashrc
+echo 'echo "" '>> .bashrc                                               
+echo 'echo -e "\033[97m   PARA MOSTAR PANEL BASH ESCRIBA:  sudo menu "'>> .bashrc
+echo 'wget -O /etc/versin_script_new https://raw.githubusercontent.com/VPS-MX/VPS-MX-8.0/master/Vercion &>/dev/null'>> .bashrc
+echo 'echo ""'>> .bashrc
+echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
+echo -e "\033[1;41m                     sudo menu                        \033[0;37m" && msg -bar2
+sleep 5
 }
 ofus () {
 unset txtofus
