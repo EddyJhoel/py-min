@@ -63,6 +63,7 @@ inst_components () {
  apt-get install apache2 -y &>/dev/null
  sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf
  service apache2 restart > /dev/null 2>&1 &
+ mkdir -p /etc/B-ADMuser &>/dev/null
  }
 }
 funcao_idioma () {
