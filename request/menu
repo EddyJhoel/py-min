@@ -539,6 +539,7 @@ valuest=$(ps ax |grep /etc/shadowsocks-r|grep -v grep)
 ofc="\033[0m${gren}(#OFICIAL)"
 dev="\033[0m${yellow}(#BETA)"
 dev2="\033[0m${red}(#PREMIUM)"
+seck="\033[0m${gren}(#SECK)"
 case $1 in
 "ports.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "ADMINISTRAR PUERTOS ACTIVOS") $ofc";;
 "dns-netflix.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "AGREGAR DNS PARA NETFLIX By @USA1_BOT  $ofc";;
@@ -549,7 +550,7 @@ case $1 in
 "tcp.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "TCP ACELERACION (BBR/PLUS)") $dev";;
 "Crear-Demo.sh")return 1;;
 "dados.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "MONITOR DE DATOS") $ofc";;
-"blockBT.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "FIREWALL PARA VPS VPS•MX") $ofc";;
+"blockBT.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "FIREWALL PARA VPS") $ofc";;
 "C-SSR.sh")return 1;;
 "gestor.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "AJUSTES INTERNOS DEL VPS") $ofc";;
 "paysnd.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "PAYLOAD FUERZA BRUTA") $ofc";;
@@ -589,6 +590,7 @@ ferramentas_fun () {
 clear
 
 tput cuu1 && tput dl1
+msg -bar2
 msg -ama "                 MENU DE HERRAMIENTAS"
 msg -bar2
 local Numb=1
@@ -690,7 +692,6 @@ tput cuu1 >&2 && tput dl1 >&2
 done
 echo $selection
 }
-clear
 # EXECUCION DE MENU
 export -f msg
 export -f selection_fun
@@ -701,7 +702,7 @@ export -f fun_ip
 clear
 #########VISUALIZACION DE MENU
 msg -bar2
-echo -e "\e[97m\033[1;41m   ----- LULSECK SCRIPT MIN -----      \033[1;37m"
+echo -e "\e[97m\033[1;41m               LULSECK SCRIPT MIN   \033[1;37m"
 msg -bar2
 echo -e "\033[1;31m   CPU: \033[1;37mNo. DE NUCLEOS:\033[1;32m $_core \033[1;37m\033[1;31m FECHA: \033[1;37m$_hora"
 echo -e "\033[1;31m   USO DE RAM: \033[1;32m$_usor       \033[1;31m USO DE CPU: \033[1;32m$_usop"
