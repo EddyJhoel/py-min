@@ -101,9 +101,7 @@ clear
 msg -bar2
 msg -ama "   ¿Deseas contactar a Lulseck TEAM?"
 msg -bar2
-echo -e "${cor[1]} =================================== ${cor[0]}"
-echo -e "${cor[2]} +51 924177369     "
-echo -e "${cor[1]} =================================== ${cor[0]}"
+echo -e "${cor[0]} +51 924177369     "
 sleep 3s
 msg -bar2
 }
@@ -658,6 +656,7 @@ clear
 export -f fun_eth
 export -f fun_bar
 menuTXT="VOLVER"
+msg -bar
 msg -ama "                  MENU DE PROTOCOLOS "
 msg -bar
 local Numb=1
@@ -780,7 +779,7 @@ echo -e "\033[1;97m   LIMITADOR:\033[1;92m $verificar \033[1;97m DESBLOQUEADOR A
 # NOVO SISTEMA DE MENUS
 msg -bra " VERSION INSTALADA: \033[1;31m[\033[1;32m $vesaoSCT\033[1;97m"
 msg -bar
-menu_func "ADMINISTRAR CUENTAS (SSH/SSL/DROPBEAR)" "ADMINISTRAR CUENTAS (SS/SSRR)" "\033[1;100mMENU DE INSTALACIONES" "PUERTOS ACTIVOS" "HERRAMIENTAS y EXTRAS" "CAMBIAR COLORES DEL PANEL" " -fi ${monitorservi} MONITOR DE SERVICIOS" "-fi $AutoRun AUTO INICIAR" "-vd ACTUALIZAR PANEL" "-vm DESINSTALAR PANEL" "CREDITOS" 
+menu_func "ADMINISTRAR CUENTAS (SSH/SSL/DROPBEAR)" "ADMINISTRAR CUENTAS (SS/SSRR)" "\033[1;100mMENU DE INSTALACIONES" "PUERTOS ACTIVOS" "HERRAMIENTAS y EXTRAS" "CAMBIAR COLORES DEL PANEL" " -fi ${monitorservi} MONITOR DE SERVICIOS" "-fi $AutoRun AUTO INICIAR" "-vd ACTUALIZAR PANEL" "-vm DESINSTALAR PANEL" "-vm CREDITOS" 
 msg -bar && echo -ne "$(msg -verd "[0]") $(msg -verm2 ">") "&& msg -bra "\033[1;41mSALIR DEL SCRIPT"
 msg -bar
 # FIM
