@@ -12,6 +12,8 @@ _hora=$(printf '%(%D-%H:%M:%S)T')
 red=$(tput setaf 1)
 gren=$(tput setaf 2)
 yellow=$(tput setaf 3)
+magenta=$(tput setaf 5)
+cyan=$(tput setaf 6)
 SCPdir="/etc/newadm" && [[ ! -d ${SCPdir} ]] && exit 1
 SCPusr="${SCPdir}/ger-user" && [[ ! -d ${SCPusr} ]] && mkdir ${SCPusr}
 SCPfrm="/etc/ger-frm" && [[ ! -d ${SCPfrm} ]] && mkdir ${SCPfrm}
@@ -548,7 +550,7 @@ valuest=$(ps ax |grep /etc/shadowsocks-r|grep -v grep)
 ofc="\033[0m${gren}(#OFICIAL)"
 dev="\033[0m${yellow}(#BETA)"
 dev2="\033[0m${red}(#PREMIUM)"
-seck="\033[0m${gren}(#SECK)"
+seck="\033[0m${magenta}(#SECK)"
 case $1 in
 "ports.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "ADMINISTRAR PUERTOS ACTIVOS") $ofc";;
 "dns-netflix.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "AGREGAR DNS PARA NETFLIX By @USA1_BOT  $ofc";;
