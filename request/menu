@@ -552,6 +552,7 @@ seck="\033[0m${gren}(#SECK)"
 case $1 in
 "ports.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "ADMINISTRAR PUERTOS ACTIVOS") $ofc";;
 "dns-netflix.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "AGREGAR DNS PARA NETFLIX By @USA1_BOT  $ofc";;
+"errormanager.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "REPARAR PUERTOS") $seck";;
 "fixapk.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "FIX-APKCUSTOM") $dev";;
 "squidpass.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "AUTENTIFICAR PROXY SQUID") $ofc";;
 "MinarBTC.sh")echo -ne "$(msg -verd "[$2]") $(msg -verm2 ">") " && msg -azu "$(fun_trans "MINAR BTC en Zpool.ca") $dev2";;
