@@ -101,7 +101,7 @@ clear
 msg -bar2
 msg -ama "   ¿Deseas contactar a Lulseck TEAM?"
 msg -bar2
-echo -e "${cor[0]} +51 924177369     "
+msg -ama "   +51 924177369     "
 sleep 3s
 msg -bar2
 }
