@@ -96,6 +96,17 @@ done
 echo "$cores" > /etc/new-adm-color
 msg -bar2
 }
+creditos_py () {
+clear
+msg -bar2
+msg -ama "   ¿Deseas contactar a Lulseck TEAM?"
+msg -bar2
+echo -e "${cor[1]} =================================== ${cor[0]}"
+echo -e "${cor[2]} +51 924177369     "
+echo -e "${cor[1]} =================================== ${cor[0]}"
+sleep 3s
+msg -bar2
+}
 fun_trans () { 
 local texto
 local retorno
@@ -769,11 +780,11 @@ echo -e "\033[1;97m   LIMITADOR:\033[1;92m $verificar \033[1;97m DESBLOQUEADOR A
 # NOVO SISTEMA DE MENUS
 msg -bra " VERSION INSTALADA: \033[1;31m[\033[1;32m $vesaoSCT\033[1;97m"
 msg -bar
-menu_func "ADMINISTRAR CUENTAS (SSH/SSL/DROPBEAR)" "ADMINISTRAR CUENTAS (SS/SSRR)" "\033[1;100mMENU DE INSTALACIONES" "PUERTOS ACTIVOS" "HERRAMIENTAS y EXTRAS" "CAMBIAR COLORES DEL PANEL" " -fi ${monitorservi} MONITOR DE SERVICIOS" "-fi $AutoRun AUTO INICIAR" "-vd ACTUALIZAR PANEL" "-vm DESINSTALAR PANEL" 
+menu_func "ADMINISTRAR CUENTAS (SSH/SSL/DROPBEAR)" "ADMINISTRAR CUENTAS (SS/SSRR)" "\033[1;100mMENU DE INSTALACIONES" "PUERTOS ACTIVOS" "HERRAMIENTAS y EXTRAS" "CAMBIAR COLORES DEL PANEL" " -fi ${monitorservi} MONITOR DE SERVICIOS" "-fi $AutoRun AUTO INICIAR" "-vd ACTUALIZAR PANEL" "-vm DESINSTALAR PANEL" "CREDITOS" 
 msg -bar && echo -ne "$(msg -verd "[0]") $(msg -verm2 ">") "&& msg -bra "\033[1;41mSALIR DEL SCRIPT"
 msg -bar
 # FIM
-selection=$(selection_fun 10)
+selection=$(selection_fun 11)
 case ${selection} in
 1)${SCPusr}/usercodes "${idioma}" ;;
 2)${SCPinst}/C-SSR.sh ;;
@@ -785,6 +796,7 @@ case ${selection} in
 8)fun_autorun;;
 9)atualiza_fun;;
 10)remove_script;;
+11)creditos_py;;
 0)cd $HOME && exit 0;;
 esac
 msg -ne "$(fun_trans "Enter Para Continuar")" && read enter
