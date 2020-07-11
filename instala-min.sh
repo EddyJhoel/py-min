@@ -214,9 +214,9 @@ wget -O /bin/monitor.sh https://raw.githubusercontent.com/EddyJhoel/py-min/maste
 chmod +x /bin/monitor.sh
 wget -O /var/www/html/estilos.css https://raw.githubusercontent.com/EddyJhoel/py-min/master/Install/estilos.css &> /dev/null
 clear
-msg -bar2
+msg -bar
 echo -e "\e[97m\033[1;41m            LULSECK SCRIP MIN            \033[1;37m"
-msg -bar2
+msg -bar
 [[ $1 = "" ]] && funcao_idioma || {
 [[ ${#1} -gt 2 ]] && funcao_idioma || id="$1"
  }
