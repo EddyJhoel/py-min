@@ -90,8 +90,8 @@ service squid3 restart > /dev/null 2>&1 &
 }
 timemx () {
 rm -rf /etc/localtime
-ln -s /usr/share/zoneinfo/America/Merida /etc/localtime
-echo -e " $(fun_trans "FECHA LOCAL MX APLICADA!")"
+ln -s /usr/share/zoneinfo/America/Lima /etc/localtime
+echo -e " $(fun_trans "FECHA LOCAL PE APLICADA!")"
 }
 resetiptables () {
 echo -e "Reiniciando Ipetables espere"
