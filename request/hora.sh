@@ -51,14 +51,14 @@ echo -e "$barra"
 menu
 }
 shadowe_fun () {
-echo -e " \033[1;36m $(fun_trans "ZONA HORARIO") \033[1;32m[EDDYJHOEL-SCRIP FLIX]"
+echo -e " \033[1;36m $(fun_trans "CONFIGURAR ZONA HORARIA") \033[1;32m[LULSECK]"
 echo -e "$barra"
 while true; do
-echo -e "${cor[4]} [1] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO PERU/LIMA")"
+echo -e "${cor[4]} [1] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  PERU/LIMA")"
 echo -e "${cor[4]} [2] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  MEXICO")"
 echo -e "${cor[4]} [3] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  HERMOSILLO")"
 echo -e "${cor[4]} [4] > ${cor[5]}$(fun_trans "ACTUALIZAR HORARIO  AMERICA/SANTIAGO")"
-echo -e "${cor[4]} [0] > ${cor[0]}$(fun_trans "SALIR")\n${barra}"
+echo -e "${cor[4]} [0] > ${cor[0]}$(fun_trans "VOLVER")\n${barra}"
 while [[ ${opx} != @(0|[1-4]) ]]; do
 echo -ne "${cor[0]}$(fun_trans "OPCIÓN"): \033[1;37m" && read opx
 tput cuu1 && tput dl1
