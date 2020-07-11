@@ -493,7 +493,7 @@ clear
 msg -bar
 msg -ama "          ¿ DESEA DESINSTALAR SCRIPT ?"
 msg -bar
-echo -e " Esto borrara todos los archivos del scrip Lsk MIN "
+echo -e " Esto borrara todos los archivos del scrip LULSECK "
 msg -bar
 while [[ ${yesno} != @(s|S|y|Y|n|N) ]]; do
 read -p " [S/N]: " yesno
