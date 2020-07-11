@@ -86,15 +86,12 @@ while true; do
 echo -e "${cor[4]} [1] > ${cor[5]}$(fun_trans "CORREGIR ERROR DE DROPBEAR")"
 echo -e "${cor[4]} [2] > ${cor[5]}$(fun_trans "CORREGIR ERROR SQUID")"
 echo -e "${cor[4]} [3] > ${cor[5]}$(fun_trans "ELIMINAR PUERTOS SSL")"
-echo -e "${cor[4]} [4] > ${cor[0]}$(fun_trans "SALIR")"
-echo -e "${cor[4]} [0] > ${cor[0]}$(fun_trans "VOLVER")\n${barra}"
-while [[ ${opx} != @(0|[1-4]) ]]; do
+echo -e "${cor[4]} [4] > ${cor[0]}$(fun_trans "VOLVER")\n${barra}"
+while [[ ${opx} != @([1-4]) ]]; do
 echo -ne "${cor[0]}$(fun_trans "Digite una Opcion"): \033[1;37m" && read opx
 tput cuu1 && tput dl1
 done
 case $opx in
-	0)
-	menu;;
 	1)
 	elimi_dropbear
 	break;;
