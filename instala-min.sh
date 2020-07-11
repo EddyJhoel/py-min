@@ -144,7 +144,7 @@ echo 'echo ""' >> .bashrc
 echo 'echo -e "\033[91m      _     _    _ _       _____ ______ _____ _  __ " '>> .bashrc
 echo 'echo -e "\033[91m     | |   | |  | | |     / ____|  ____/ ____| |/ / " '>> .bashrc
 echo 'echo -e "\033[91m     | |   | |  | | |    | (___ | |__ | |    | ' /  " '>> .bashrc
-echo 'echo -e "\033[91m     | |   | |  | | |     \___ \|  __|| |    |  <   " '>> .bashrc
+echo 'echo -e "\033[91m     | |   | |  | | |     \___ \|  __|| |    |  c   " '>> .bashrc
 echo 'echo -e "\033[91m     | |___| |__| | |____ ____) | |___| |____| . \  " '>> .bashrc
 echo 'echo -e "\033[91m     |______\____/|______|_____/|______\_____|_|\_\ " '>> .bashrc
 echo 'echo "" '>> .bashrc
